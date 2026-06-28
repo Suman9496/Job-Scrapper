@@ -1,0 +1,6 @@
+{
+  "name": "Hybrid IT Job Intelligence Scraper",
+  "description": "A production-grade IT job scraper and automated cold email generator with ATS auto-detection, multi-portal scraping, strict location/freshness filters, deduplication, and Excel export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
