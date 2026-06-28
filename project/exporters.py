@@ -68,6 +68,13 @@ class ExcelExporter:
             df_all = pd.DataFrame(columns=cls.COLUMNS)
             
         # Segments by Target Cities / Remote
+
+        if "Area" not in df_all.columns:
+            df_all["Area"] = "Unknown"
+
+        df_all["City"] = df_all["Area"].fillna("Unknown").astype(str).str.strip().str.lower()
+
+        
         city_sheets = {
             "Pune": df_all[df_all["City"].str.lower().str.contains("pune", na=False)],
             "Bangalore": df_all[df_all["City"].str.lower().str.contains("bangalore|bengaluru", na=False)],
