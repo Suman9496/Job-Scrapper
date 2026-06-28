@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Scraper
-        run: python project/scraper.py
+        run: python -m project.scraper
 
       - name: Upload Excel File
         uses: actions/upload-artifact@v4
