@@ -2,7 +2,7 @@ name: Job Scraper Automation
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # every 24 hours
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Scraper
-        run: python scraper.py
+        run: python project/scraper.py
 
       - name: Upload Excel File
         uses: actions/upload-artifact@v4
